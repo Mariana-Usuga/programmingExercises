@@ -23,35 +23,45 @@ A = 1,5,7,  B = 9,15
 So the minimum possible value of mast) min(B) is 2*/
 
 function minMax(num, inputArray) {
-    let a = '';
-    let b = '';
+    let a = [];
+    let b = [];
     let divide = 0;
     let lastElement;
-    for(let i=0; i<num; i++){
       if (num % 2 === 0 ) {
         divide = num / 2;
         for(let j=0; j<divide; j++) {
-          a += ' ' + inputArray[j]?.toString();
+          a.push(inputArray[j]?.toString());
         }
-        for(let k=divide; k<= num; k++) {
-          b += ' ' + inputArray[k]?.toString();
+        for(let k=divide; k< num; k++) {
+          b.push(inputArray[k]?.toString());
         }
       } else {
         lastElement = inputArray.pop();
         divide = inputArray.length / 2;
         for(let j=0; j<divide; j++) {
-          a += ' ' + inputArray[j]?.toString();
+          a.push(inputArray[j]?.toString());
         }
-        for(let k=divide; k<= num; k++) {
-          b += ' ' + inputArray[k]?.toString();
+        for(let k=divide; k< num; k++) {
+          b.push(inputArray[k]?.toString());
         }
+      }
+
+    let maxA = 0;
+    let maxB = 0;
+    for(let i=0; i<a.length; i++){
+      if(a[i] > maxA){
+        maxA = a[i];
+      }
+    }
+    for(let i=0; i<b.length; i++){
+      if(b[i] > maxB){
+        maxB = b[i];
       }
     }
 
-    console.log('A', a)
-
-    return 8;
+    const result = maxA - maxB;
+    return Math.abs(result);
 
 }
 
-minMax(6, [2,9,7,6,3,7]);
+console.log(minMax(6, [2,5,1,6,3]));
