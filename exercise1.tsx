@@ -49,8 +49,8 @@ function minMax(num, inputArray) {
     }
 
     console.log('A', a)
-    console.log('B', b)
-return 8;
+
+    return 8;
 
 }
 
