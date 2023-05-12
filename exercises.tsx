@@ -87,4 +87,27 @@ function sumsInLoop(array1, array2){
   return result;
 }
 
-console.log('RESUL ', sumsInLoop([9,24,4,2], [7,6,5]))
+//console.log('RESUL ', sumsInLoop([9,24,4,2], [7,6,5]))
+
+/* Minimum of Two
+Depending on your programming language syntax could be different and else part is almost always optional. You can read more in wikipedia article on Conditional statements.
+
+Of two numbers, please, select one with minimum value. Here are several pairs of numbers for thorough testing.
+
+Input data will contain number of test-cases in the first line.
+Following lines will contain a pair of numbers to compare each.*/
+
+function minimumOfTwo(array1, array2){
+  let result = []
+  if(array1.length >= array1.length){
+    for(let i=0; i<array1.length; i++) {
+      if(array1[i] >= array2[i]){
+        result = [...result, array2[i]]
+      } else {
+        result = [...result, array1[i]]
+      }
+    }
+  }
+  return result;
+}
+console.log('minimum ', minimumOfTwo([3,9,8,9], [4,2,9]))
