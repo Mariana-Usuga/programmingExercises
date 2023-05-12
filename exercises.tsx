@@ -64,19 +64,27 @@ function minMax(num, inputArray) {
 
 }
 
-console.log(minMax(6, [2,5,1,6,3]));
+//console.log(minMax(6, [2,5,1,6,3]));
 
-/**Write code that enhances all arrays such that you can call the array.last() method on any array and it will return the last element. If there are no elements in the array, it should return -1.
- 
-Example 1:
-Input: nums = [1,2,3]
-Output: 3
-Explanation: Calling nums.last() should return the last element: 3.
-Example 2:
-Input: nums = []
-Output: -1
-Explanation: Because there are no elements, return -1.
- 
-Constraints:
-0 <= arr.length <= 1000
-0 <= arr[i] <= 1000*/
+/** SUMS IN LOOP
+Input data will contain the total count of pairs to process in the first line.
+The following lines will contain pairs themselves - one pair at each line.
+Answer should contain the results separated by spaces.*/
+
+function sumsInLoop(array1, array2){
+  const result = [];
+  if(array1.length >= array1.length){
+    for(let i=0; i<array1.length; i++) {
+      //for(let j=0; j<array2; j++) {
+        if(isNaN(array1[i]) || isNaN(array2[i])) {
+          continue;
+        }else{
+          result[i] = array1[i] + array2[i];
+        }
+      //}
+    } 
+  }
+  return result;
+}
+
+console.log('RESUL ', sumsInLoop([9,24,4,2], [7,6,5]))
