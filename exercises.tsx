@@ -131,3 +131,18 @@ data:
 answer:
 3 15 137  
 */
+
+function minimumOfThree(array1, array2){
+  let result = []
+  if(array1.length >= array1.length){
+    for(let i=0; i<array1.length; i++) {
+      if(array1[i] >= array2[i]){
+        result = [...result, array2[i]]
+      } else {
+        result = [...result, array1[i]]
+      }
+    }
+  }
+  return result;
+}
+console.log('minimum ', minimumOfTwo([3,9,8,9], [4,2,9]))
