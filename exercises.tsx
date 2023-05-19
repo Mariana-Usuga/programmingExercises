@@ -113,7 +113,8 @@ function minimumOfTwo(array1, array2){
 console.log('minimum ', minimumOfTwo([3,9,8,9], [4,2,9]))
 
 /*
-
+Minimum of Three
+m
 To have more practice with conditional statements we are going to write a program which uses complex condition. I.e. one if ... else statement could be (and should be) nested inside other to solve this problem.
 
 Several triplets of numbers are given to you. Your task is to select minimum among each of triplets.
