@@ -145,4 +145,5 @@ function minimumOfThree(array1, array2){
   }
   return result;
 }
+
 console.log('minimum ', minimumOfTwo([3,9,8,9], [4,2,9]))
