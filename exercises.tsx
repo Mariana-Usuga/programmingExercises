@@ -111,7 +111,7 @@ function minimumOfTwo(array1, array2){
   return result;
 }
 
-console.log('minimum ', minimumOfTwo([3,9,8,9], [4,2,9]))
+//console.log('minimum ', minimumOfTwo([3,9,8,9], [4,2,9]))
 
 /*
 Minimum of Three
@@ -147,7 +147,7 @@ function minimumOfThree(array1, array2){
   return result;
 }
 
-console.log('minimum ', minimumOfTwo([3,9,8,9], [4,2,9]))
+//console.log('minimum ', minimumOfTwo([3,9,8,9], [4,2,9]))
 
 /**  
  * Write code that enhances all arrays such that you can call the array.last() method on any array and it will return the last element. If there are no elements in the array, it should return -1.
@@ -159,3 +159,24 @@ Input: nums = [1,2,3]
 Output: 3
 Explanation: Calling nums.last() should return the last element: 3.
  */
+
+ /** Preguntar aleatorio a una entrevista */
+ function randomQuestion(){
+  const a = ['1. Cual es mi meta en la vida?', '2. como te ves en corto, mediano y largo plazo?',
+'3. que esperas aprender de nosostros?', '4. como reaccionarias ante una tarea que no supieses realizar?',
+'5.¿podrias enumerar 3 virtudes y 3 defectos?', '6. cual es tu motivacion?', '7. Cómo manejas el estrés y los plazos ajustados?',
+'8. Cómo te mantienes actualizado con las últimas tecnologías y lenguajes de programación?', '9. Describe una situación en la que tuviste que colaborar estrechamente con alguien cuyo estilo de trabajo era muy diferente al tuyo?',
+'10. ¿Podrías darme un ejemplo de un problema técnico complicado que hayas resuelto? ¿Cómo lo abordaste?',
+'11. ¿Cómo manejas las críticas o el feedback constructivo?', '12. ¿Has tenido que explicar un concepto técnico complejo a un compañero de trabajo no técnico o a un cliente? ¿Cómo lo hiciste?',
+'13. ¿Puedes contarme sobre un proyecto o logro del que estés particularmente orgulloso?',
+'14. ¿Cómo te adaptas a los cambios, como por ejemplo, un cambio en las prioridades del proyecto o en la dirección del proyecto?',
+'15. ¿Cuál crees que es tu mayor debilidad como desarrollador Full Stack y cómo estás trabajando para mejorarla?',
+'16. Describe una vez que hayas cometido un error en tu trabajo. ¿Cómo lo manejaste y qué aprendiste de ello?',
+'17.  cuales son tus objetivos profesionales?']
+
+const number = Math.floor(Math.random() * (a.length - 0 + 1) + 0);
+console.log('NUMBER ', number)
+return a[number]
+ }
+
+ console.log('PREGUNTA ', randomQuestion())
