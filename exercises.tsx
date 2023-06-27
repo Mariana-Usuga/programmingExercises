@@ -196,6 +196,7 @@ Return the total cost to hire exactly k workers. */
 function totalCost(costs, k, candidates){
   let smaller = 0;
   let cost = 0;
+  let costsNew = [];  
   for(let i=0; costs.length; i++){
     if(costs[i] <= costs[i + 1]){
       smaller = costs[i];
@@ -204,5 +205,6 @@ function totalCost(costs, k, candidates){
       cost = i + smaller;
     }
   }
+  console.log('smaller ', smaller);
 
 }
