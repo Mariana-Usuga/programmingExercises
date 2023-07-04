@@ -204,6 +204,6 @@ class Rectangle {
     this.ancho = ancho;
   }
 }
-const p = new Rectangle(2, 4); // ReferenceError
+const p = new Rectangle(2, 4);
 
 console.log(checkIfInstanceOf(p, Rectangle));
