@@ -188,17 +188,17 @@ There are no constraints on the data types that can be passed to the function. F
 the value or the class could be undefined.*/
 
 var checkIfInstanceOf = function(obj, classFunction) {
-    if(typeof obj == classFunction){
+    if(typeof obj === classFunction || obj instanceof classFunction){
       return true
     }
     return false
 };
 
-console.log(checkIfInstanceOf(new Date(), 'object'));
+//console.log(checkIfInstanceOf(new Date(), 'object'));
 
 class Rectangle {
-  alto: any;
-  ancho: any;
+  alto;
+  ancho;
   constructor(alto, ancho) {
     this.alto = alto;
     this.ancho = ancho;
@@ -215,5 +215,13 @@ Return the size of the longest non-empty subarray containing only 1's in the res
  */
 
 function longestSubarray(nums){
-
+  const newArray = [];
+  for(let i=0; i<nums.length; i++) {
+    if(nums[i] === 1){
+      newArray.push(nums[i])
+    }
+  }
+  return newArray.length;
 }
+
+console.log(longestSubarray([1,1,1,1,0,1,0]))
