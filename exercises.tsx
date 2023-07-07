@@ -226,3 +226,29 @@ function longestSubarray(nums){
 
 console.log(longestSubarray([1,1,1,1,0,1,0]))
 
+/**Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+
+The overall run time complexity should be O(log (m+n)).
+https://leetcode.com/problems/median-of-two-sorted-arrays/
+*/
+
+function findMedianSortedArrays(nums1, nums2){
+  let small1 = 0
+  let small2 = 0
+  const array = [];
+  const con = nums1.concat(nums2);
+  console.log('con ', con)
+  for (let i = 0; i < con.length - 1; i++) {
+    for (let j = 0; j < con.length - i - 1; j++) {
+      if (con[j] > con[j + 1]) {
+        // Intercambiar los elementos
+        let temp = con[j];
+        con[j] = con[j + 1];
+        con[j + 1] = temp;
+      }
+    }
+  }
+  return con;
+}
+
+console.log('findMedianSortedArrays', findMedianSortedArrays([1,7,6,5], [2,3,4]))
