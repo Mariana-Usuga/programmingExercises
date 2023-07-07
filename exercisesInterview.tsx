@@ -26,3 +26,10 @@ for (var i = 0; i < 4; i++) {
   setTimeout(() => console.log(i), 0)
 }
 
+/**ASINCRONIA */
+/**Pilar fundamental de javascript: solo 1 hilo,  */
+/**Event loop: permite gestionar y controlar la ejecución de tareas asincrónicas de manera eficiente.
+ * la pila de llamadas (call stack) y la cola de tareas (task queue).se ejecuta de manera sincronica. pero cuando encuentra
+ * una asincronica se pasa a realizar otra tarea cuando finaliza la asincronica se agrega una función de devolución 
+ * de llamada (callback) a la cola de tareas en lugar de ser ejecutada de inmediato.  
+ */
