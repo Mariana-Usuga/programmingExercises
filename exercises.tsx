@@ -261,3 +261,5 @@ console.log('findMedianSortedArrays', findMedianSortedArrays([1,7,6,5], [2,3,4])
 '*' Matches zero or more of the preceding element.
 The matching should cover the entire input string (not partial).
  */
+
+function isMatch(){}
