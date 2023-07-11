@@ -262,4 +262,21 @@ console.log('findMedianSortedArrays', findMedianSortedArrays([1,7,6,5], [2,3,4])
 The matching should cover the entire input string (not partial).
  */
 
-function isMatch(){}
+function isMatch(nums1, nums2){
+  let small1 = 0
+  let small2 = 0
+  const array = [];
+  const con = nums1.concat(nums2);
+  console.log('con ', con)
+  for (let i = 0; i < con.length - 1; i++) {
+    for (let j = 0; j < con.length - i - 1; j++) {
+      if (con[j] > con[j + 1]) {
+        // Intercambiar los elementos
+        let temp = con[j];
+        con[j] = con[j + 1];
+        con[j + 1] = temp;
+      }
+    }
+  }
+  return con;
+}
