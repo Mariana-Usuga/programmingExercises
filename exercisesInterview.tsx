@@ -33,3 +33,33 @@ for (var i = 0; i < 4; i++) {
  * una asincronica se pasa a realizar otra tarea cuando finaliza la asincronica se agrega una función de devolución 
  * de llamada (callback) a la cola de tareas en lugar de ser ejecutada de inmediato.  
  */
+
+
+/**FIZZBUZZ
+ * Firstly, let’s get this out of the way, FizzBuzz is a task where the programmer is asked to print numbers 
+ * from 1 to 100, but here’s the catch, multiple of three should print “Fizz” and similarly print “Buzz” 
+ * for multiples of 5 and lastly print “FizzBuzz” for multiples of three and five.
+ */
+
+function fizzBuzz(){
+  for(let i = 1; i <=100; i++ ){
+    let men = "";
+    if(i % 3 === 0){
+      men += "Fizz"
+    }
+    if(i % 5 === 0){
+      men += "Buzz"
+    }
+    console.log(men || i)
+  }
+}
+
+function variables(){
+  let i = 'con'// var
+
+  for(let i = 1; i <=100; i++ ){ //var
+
+  }
+
+  console.log(i)// con pero si es var i=2
+}
