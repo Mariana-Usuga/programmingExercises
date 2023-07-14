@@ -97,3 +97,35 @@ function invertirCadena(cad) {
   //Paso 4. Devolver la cadena invertida
   return unirArreglo; // "aloh"
 }
+
+/**find the largest or smallest number in an array.
+Reverse a string of text.
+Determine if a string of text is a palindrome (reads the same forwards and backwards).
+Calculate the sum of all elements in an array.
+Find the missing number in a number sequence.
+Sort an array in ascending or descending order.
+Search for a specific element in an array and return its index.
+Calculate the factorial of a number.
+Determine if two strings are anagrams (have the same letters but in a different order).
+Implement search and sorting algorithms such as Binary Search, Merge Sort, or Quick Sort. */
+
+/** Detector de bombas */
+const arra1 = [1, 7, 2, 6, 10, 15, 17, 27, 25, 125, 467, 1070]
+  const arra2 = [0, 23, 40, 55, 62, 44, 18, 101, 405, 1080]
+function detector(arr){
+  const bomb = []
+  arr.forEach(e => {
+    const numString = e.toString()
+    for(let i = 0; i < numString.length; i++){
+      bomb.push(+numString.charAt(i)) // obtener el carácter en una posición específica de una cadena.
+    }
+  });
+  const contain = bomb.includes(7)//boolean
+  //const c = bomb.filter(seven => seven === 7) // new array
+  if(contain){
+    return 'tiene bomba'
+  } else {
+    return 'tranqui'
+  }
+}
+console.log(detector(arra1));
