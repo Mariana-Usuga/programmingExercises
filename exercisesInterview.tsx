@@ -129,3 +129,23 @@ function detector(arr){
   }
 }
 console.log(detector(arra1));
+
+/**Create a function that allows us to perform the 4 arithmetic operations, namely, addition, subtraction, 
+ * division, and multiplication. The function should take 3 parameters, where two of them are the values (a and b), 
+ * and one is the name of the operation (in lowercase). If the operation parameter is not valid, it should log a
+ * custom error message to the console. */
+function performArithmeticOperation(a, b, operation) {
+  switch (operation) {
+    case "add":
+      return a + b;
+    case "subtract":
+      return a - b;
+    case "multiply":
+      return a * b;
+    case "divide":
+      return a / b;
+    default:
+      console.error("Invalid operation. Please provide a valid operation: add, subtract, multiply, or divide.");
+      break;
+  }
+}
