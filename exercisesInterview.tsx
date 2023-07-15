@@ -21,19 +21,14 @@ function greet2(person) {
 greet({ name: 'amy' }) // "hey amy"
 
 /**Exercise 2
-I want this code to log out the numbers 0, 1, 2, 3 in that order, but it doesn’t do what I expect (this is a bug you run into once in a while, and some people love to ask about it in interviews). */
-for (var i = 0; i < 4; i++) {
-  setTimeout(() => console.log(i), 0)
+I want this code to log out the numbers 0, 1, 2, 3 in that order, but it doesn’t do what I expect 
+(this is a bug you run into once in a while, and some people love to ask about it in interviews). */
+function settime(){
+  for (var i = 0; i < 4; i++) {
+    setTimeout(() => console.log(i), 0)
+  }
 }
-
-/**ASINCRONIA */
-/**Pilar fundamental de javascript: solo 1 hilo,  */
-/**Event loop: permite gestionar y controlar la ejecución de tareas asincrónicas de manera eficiente.
- * la pila de llamadas (call stack) y la cola de tareas (task queue).se ejecuta de manera sincronica. pero cuando encuentra
- * una asincronica se pasa a realizar otra tarea cuando finaliza la asincronica se agrega una función de devolución 
- * de llamada (callback) a la cola de tareas en lugar de ser ejecutada de inmediato.  
- */
-
+settime()
 
 /**FIZZBUZZ
  * Firstly, let’s get this out of the way, FizzBuzz is a task where the programmer is asked to print numbers 
@@ -50,7 +45,7 @@ function fizzBuzz(){
     if(i % 5 === 0){
       men += "Buzz"
     }
-    console.log(men || i)
+    //console.log(men || i)
   }
 }
 
@@ -61,7 +56,7 @@ function variables(){
 
   }
 
-  console.log(i)// con pero si es var i=2
+ // console.log(i)// con pero si es var i=2
 }
 
 /**To find the largest number in an array. */
@@ -70,7 +65,7 @@ function mayor(){
   var arreglo = [3 , 6, 2, 56, 32, 5, 89, 32];
 var mayor = 0;
  
-for(i = 0; i < arreglo.length; i++){
+for(let i = 0; i < arreglo.length; i++){
     if (arreglo[i] > mayor)
     {
         mayor = arreglo[i];
@@ -128,7 +123,7 @@ function detector(arr){
     return 'tranqui'
   }
 }
-console.log(detector(arra1));
+//console.log(detector(arra1));
 
 /**Create a function that allows us to perform the 4 arithmetic operations, namely, addition, subtraction, 
  * division, and multiplication. The function should take 3 parameters, where two of them are the values (a and b), 
@@ -145,7 +140,62 @@ function performArithmeticOperation(a, b, operation) {
     case "divide":
       return a / b;
     default:
-      console.error("Invalid operation. Please provide a valid operation: add, subtract, multiply, or divide.");
-      break;
+      console.log("Invalid operation. Please provide a valid operation: add, subtract, multiply, or divide.");
   }
 }
+
+//console.log(performArithmeticOperation(2,3, "adh"))
+
+/** Create a function that stores all the even numbers from a to b in an array. */
+
+function evenNumbers(a, b){
+  const evenMunbers = []
+  for(let i = a; i < b; i++ ){
+    if(i % 2 === 0){
+      evenMunbers.push(i)
+    }
+  }
+  return evenMunbers;
+}
+ 
+//console.log(evenNumbers(10,20)) 
+
+/** Create a multiplication table for a number (a) from 0 to x, but exclude the multiplication of a * 5. */
+
+/** Concurrencia */
+function fetchMultipleUrls(urls) {
+  const promises = urls.map(url => fetch(url)); // Supongamos que fetch() es una función que realiza una solicitud de red y devuelve una Promesa
+
+  return Promise.all(promises)
+    .then(responses => {
+      const results = responses.map(response => response.text());
+      return Promise.all(results);
+    })
+    .then(contents => {
+      console.log('Contenido de las URLs:', contents);
+    })
+    .catch(error => {
+      console.error('Error al realizar las solicitudes:', error);
+    });
+}
+
+// Ejemplo de uso, CONCURRENCIA
+const urls = ['https://example.com', 'https://api.com', 'https://google.com'];
+//fetchMultipleUrls(urls);
+
+
+function performTask(taskName, duration) {
+  console.log(`Iniciando tarea: ${taskName}`);
+
+  setTimeout(() => {
+    console.log(`Tarea completada: ${taskName}`);
+  }, duration);
+}
+
+/*console.log('Inicio del programa');
+
+performTask('Tarea 1', 2000);
+performTask('Tarea 2', 3000);
+performTask('Tarea 3', 1000);
+
+console.log('Fin del programa');*/

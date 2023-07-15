@@ -251,7 +251,7 @@ function findMedianSortedArrays(nums1, nums2){
   return con;
 }
 
-console.log('findMedianSortedArrays', findMedianSortedArrays([1,7,6,5], [2,3,4]))
+//console.log('findMedianSortedArrays', findMedianSortedArrays([1,7,6,5], [2,3,4]))
 
 /**https://leetcode.com/problems/regular-expression-matching/
  * 
