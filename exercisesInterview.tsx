@@ -199,3 +199,23 @@ performTask('Tarea 2', 3000);
 performTask('Tarea 3', 1000);
 
 console.log('Fin del programa');*/
+
+/**Exercise 3
+I want this code to log out “doggo”, but it logs out undefined! */
+let dog = {
+  name: 'doggo',
+  sayName() {
+    console.log(this.name)
+  },
+}
+let sayName = dog.sayName
+sayName()
+/*El resultado de sayName() es undefined debido al contexto de ejecución de la función 
+y cómo se relaciona con la propiedad name del objeto dog.
+Cuando haces let sayName = dog.sayName, estás creando una nueva variable sayName que 
+referencia a la función sayName que está definida dentro del objeto dog. Sin embargo, 
+en este caso, la función sayName se está ejecutando sin tener un objeto al que esté vinculada.
+Cuando invocas sayName(), la función se ejecuta sin un contexto de objeto (this), lo que significa 
+que this.name dentro de la función no está haciendo referencia al objeto dog. En su lugar, this se 
+refiere al objeto global (window en el navegador o global en Node.js), y como el objeto global no 
+tiene una propiedad name, la expresión this.name es undefined.*/ 
