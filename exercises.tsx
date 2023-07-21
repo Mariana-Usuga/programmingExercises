@@ -206,7 +206,7 @@ class Rectangle {
 }
 const p = new Rectangle(2, 4);
 
-console.log(checkIfInstanceOf(p, Rectangle));
+//console.log(checkIfInstanceOf(p, Rectangle));
 
 /**https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
  * Given a binary array nums, you should delete one element from it.
@@ -224,7 +224,7 @@ function longestSubarray(nums){
   return newArray.length;
 }
 
-console.log(longestSubarray([1,1,1,1,0,1,0]))
+//console.log(longestSubarray([1,1,1,1,0,1,0]))
 
 /**Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 
@@ -285,7 +285,7 @@ function isMatch(nums1, nums2){
  * Given an integer x, return true if x is a palindrome
 , and false otherwise. */
 let mar = null
-console.log('mar ', mar)
+//console.log('mar ', mar)
 
 /**https://leetcode.com/problems/memoize-ii/
  * Given a function fn, return a memoized version of that function.
@@ -300,3 +300,68 @@ function memoize(fn) {
       
   }
 }
+
+function no (){
+  var n = 1
+  console.log('de ', n)
+  for (var n = 0; n < 3; n++) {
+    console.log('for ', n)
+  }
+}
+//console.log('fu ', n)
+//no()
+
+//INTERVIEW => codeShare
+const numeros = [1, 3, 5, 9, 8]
+
+numeros.filter(numero => numero % 2 === 0);
+
+//console.log(numeros);
+
+//////////////////////////////////////////
+
+const productos = [
+  {
+    id: 1,
+    precio: 9
+  },
+  {
+    id: 2,
+    precio: -3
+  },
+];
+
+const productosCambiados =  productos.map(producto => {
+  if(producto.precio < 0 ) {
+    
+     producto.precio = 0;
+  }
+});
+//console.log(productosCambiados);
+
+//////////////////////////////////////////
+
+/*
+ * Dado un array de enteros, retornar un nuevo array tal que cada elemento en el índice i del nuevo array 
+ * sea el producto de todos los números en el array original exceptuando el elemento en la posición i.
+Ejemplo 1: si el input es [1, 2, 3, 4, 5], el output debería ser [120, 60, 40, 30, 24]. 
+Ejemplo 2: Si el input es [3, 2, 1], el output debería ser [2, 3, 6].
+Ejemplo 3: [7, 2, 5, 3] ==> [30, ]
+*/
+function newArray(array){
+  const newArray = []
+  let re = 1
+  for(let i = 0; i < array.length; i++){
+      array.map((num, ind) => {
+        if(i !== ind){
+          re *= num;
+        }
+      } )
+      newArray.push(re)
+      re = 1
+  }
+  
+  return newArray;
+}
+
+console.log(newArray([1, 2, 3, 4, 5]));
