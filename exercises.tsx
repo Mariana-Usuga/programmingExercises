@@ -364,4 +364,64 @@ function newArray(array){
   return newArray;
 }
 
-console.log(newArray([1, 2, 3, 4, 5]));
+//console.log(newArray([1, 2, 3, 4, 5]));
+
+/**  
+ * Given an array of strings, return a new array where each element is the length of the corresponding 
+ * string in the original array.
+Example: If the input is ["apple", "banana", "orange"], the output should be [5, 6, 6].*/
+
+
+
+/*Given an array of numbers, return a new array where each element is the square of the corresponding number in the original array.
+Example: If the input is [2, 4, 6], the output should be [4, 16, 36].
+
+Given an array of strings, return a new array where each element is the reverse of the corresponding string in the original array.
+Example: If the input is ["hello", "world", "javascript"], the output should be ["olleh", "dlrow", "tpircsavaj"].
+
+Given an array of numbers, return a new array where each element is the sum of all the numbers in the original array except the number at that index.
+Example: If the input is [1, 2, 3, 4], the output should be [9, 8, 7, 6].
+
+Given an array of strings, return a new array where each element is the uppercase version of the corresponding string in the original array.
+Example: If the input is ["hello", "world", "javascript"], the output should be ["HELLO", "WORLD", "JAVASCRIPT"].
+ */
+
+
+
+/**   
+ * Given an array of numbers, find the two numbers that add up to a given target sum and return their indices 
+ * in a new array. If there are multiple pairs that add up to the target sum, return any one of them.
+Example: If the input array is [2, 4, 6, 8] and the target sum is 10, the output should be [1, 2], as 4 + 6 equals 10.*/
+function AddTwoNumbers(array, target){
+  let output = []
+  let foundSum = false
+  for(let i = 0; i < array.length; i++){
+    for(let j = 0; j < array.length -1; j++){
+        if((array[i] !== array[j]) && array[i] + array[j] === target){
+          foundSum = true
+          output = [...output, i, j]
+          break
+        }
+      if(foundSum) break;
+    }
+    if(foundSum) break;
+}
+return output
+}
+
+console.log('AddTwoNumbers ', AddTwoNumbers([2,4,6,8], 12))
+
+
+/*
+Given an array of integers, find the longest subarray that contains an equal number of even and odd elements. Return the subarray itself.
+Example: If the input array is [2, 5, 10, 4, 7], the output should be [5, 10, 4], as it contains two even numbers (2 and 10) and two odd numbers (5 and 7).
+
+Given an array of words, find the longest word that can be formed by combining two words from the original array. Return the longest word itself.
+Example: If the input array is ["apple", "banana", "orange", "pie"], the output should be "bananaorange", as it is the longest word that can be formed by combining "banana" and "orange".
+
+Given an array of numbers, find the longest increasing subarray and return the subarray itself.
+Example: If the input array is [1, 2, 3, 2, 5, 6, 1, 7], the output should be [2, 5, 6, 1, 7], as it is the longest subarray that is strictly increasing.
+
+Given an array of strings, find the common prefix among all the strings and return the prefix itself.
+Example: If the input array is ["apple", "apricot", "apartment"], the output should be "ap", as it is the common prefix among all the strings.
+  */
