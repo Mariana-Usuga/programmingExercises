@@ -395,7 +395,8 @@ Example: If the input array is [2, 4, 6, 8] and the target sum is 10, the output
 function AddTwoNumbers(array, target){
   let output = []
   let foundSum = false
-  for(let i = 0; i < array.length; i++){
+  let i = 0
+    while(i < array.length){
     for(let j = 0; j < array.length -1; j++){
         if((array[i] !== array[j]) && array[i] + array[j] === target){
           foundSum = true
@@ -405,11 +406,12 @@ function AddTwoNumbers(array, target){
       if(foundSum) break;
     }
     if(foundSum) break;
+    i++
 }
 return output
 }
 
-console.log('AddTwoNumbers ', AddTwoNumbers([2,4,6,8], 12))
+console.log('AddTwoNumbers ', AddTwoNumbers([2,4,6,8], 14))
 
 
 /*
