@@ -316,7 +316,7 @@ const numeros = [1, 3, 5, 9, 8]
 
 numeros.filter(numero => numero % 2 === 0);
 
-//console.log(numeros);
+console.log(numeros);
 
 //////////////////////////////////////////
 
@@ -337,7 +337,7 @@ const productosCambiados =  productos.map(producto => {
      producto.precio = 0;
   }
 });
-//console.log(productosCambiados);
+console.log(productosCambiados);
 
 //////////////////////////////////////////
 
@@ -411,17 +411,39 @@ function AddTwoNumbers(array, target){
 return output
 }
 
-console.log('AddTwoNumbers ', AddTwoNumbers([2,4,6,8], 14))
+//console.log('AddTwoNumbers ', AddTwoNumbers([2,4,6,8], 14))
 
 
 /*
-Given an array of integers, find the longest subarray that contains an equal number of even and odd elements. Return the subarray itself.
-Example: If the input array is [2, 5, 10, 4, 7], the output should be [5, 10, 4], as it contains two even numbers (2 and 10) and two odd numbers (5 and 7).
+Given an array of integers, find the longest subarray that contains an equal number of even and odd elements.
+ Return the subarray itself.
+Example: If the input array is [2, 5, 10, 4, 7], the output should be [5, 10, 4], as it contains 
+two even numbers (2 and 10) and two odd numbers (5 and 7).*/
+function a(){
 
-Given an array of words, find the longest word that can be formed by combining two words from the original array. Return the longest word itself.
-Example: If the input array is ["apple", "banana", "orange", "pie"], the output should be "bananaorange", as it is the longest word that can be formed by combining "banana" and "orange".
+}
 
-Given an array of numbers, find the longest increasing subarray and return the subarray itself.
+
+/*Given an array of words, find the longest word that can be formed by combining two words from the original array. 
+Return the longest word itself.
+Example: If the input array is ["apple", "banana", "orangee", "pie"], the output should be "bananaorange", 
+as it is the longest word that can be formed by combining "banana" and "orange".*/
+function b(array){
+  let longestWords = ''
+    for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      const combinedWord = array[i] + array[j];
+      if(combinedWord.length > longestWords.length){
+        longestWords = combinedWord;
+    }
+}
+    }
+  return longestWords
+}
+console.log('b ', b(["apple", "n", "ba", "pi", "pie"]))
+
+
+/*Given an array of numbers, find the longest increasing subarray and return the subarray itself.
 Example: If the input array is [1, 2, 3, 2, 5, 6, 1, 7], the output should be [2, 5, 6, 1, 7], as it is the longest subarray that is strictly increasing.
 
 Given an array of strings, find the common prefix among all the strings and return the prefix itself.
