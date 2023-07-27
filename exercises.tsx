@@ -444,8 +444,22 @@ console.log('b ', b(["apple", "n", "ba", "pi", "pie"]))
 
 
 /*Given an array of numbers, find the longest increasing subarray and return the subarray itself.
-Example: If the input array is [1, 2, 3, 2, 5, 6, 1, 7], the output should be [2, 5, 6, 1, 7], as it is the longest subarray that is strictly increasing.
+Example: If the input array is [1, 2, 3, 2, 5, 6, 1, 7], the output should be [2, 5, 6, 1, 7], 
+as it is the longest subarray that is strictly increasing.*/
+function increasingSubarray(array){
+  for (let i = 0; i < array.length - 1; i++) {
+    if(array[i] < array[i + 1]){
+      array.shift()
+    } else {
+      break
+    }
+  }
+  return array
+}
 
-Given an array of strings, find the common prefix among all the strings and return the prefix itself.
+console.log('IN ', increasingSubarray([1,2,3,2,5,6,1,7]))
+
+
+/*Given an array of strings, find the common prefix among all the strings and return the prefix itself.
 Example: If the input array is ["apple", "apricot", "apartment"], the output should be "ap", as it is the common prefix among all the strings.
   */
